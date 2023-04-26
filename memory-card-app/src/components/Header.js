@@ -1,7 +1,13 @@
+import Logo from './Logo';
+import Name from './Name';
+
 const Header = () => {
     return (
         <div className='header'>
-            <h1>Memory Card</h1>
+            <div className='name-logo'>
+                <Logo />
+                <Name />
+            </div>
         </div>
     );
 };
