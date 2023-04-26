@@ -11,7 +11,9 @@ function App() {
         <div className='App'>
             <Header />
             <div className='gameboard'>
-                <Card />
+                {images.map((image, index) => (
+                    <Card image={image} key={index} />
+                ))}
             </div>
         </div>
     );
