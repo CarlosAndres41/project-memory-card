@@ -5,7 +5,7 @@ import Card from './components/Card';
 const coolImages = require('cool-images');
 
 function App() {
-    const images = coolImages.many(100, 200, 8);
+    const images = coolImages.many(200, 200, 8);
 
     return (
         <div className='App'>
