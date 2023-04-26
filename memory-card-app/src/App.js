@@ -2,10 +2,14 @@ import './App.css';
 import Header from './components/Header';
 import Card from './components/Card';
 
+import addListeners from './utils/AddEvListeners';
+
 const coolImages = require('cool-images');
 
 function App() {
     const images = coolImages.many(200, 200, 8);
+
+    addListeners();
 
     return (
         <div className='App'>
