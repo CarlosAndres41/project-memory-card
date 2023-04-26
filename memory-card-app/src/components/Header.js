@@ -1,5 +1,6 @@
 import Logo from './Logo';
 import Name from './Name';
+import Scoreboard from './Scoreboard';
 
 const Header = () => {
     return (
@@ -8,6 +9,7 @@ const Header = () => {
                 <Logo />
                 <Name />
             </div>
+            <Scoreboard />
         </div>
     );
 };
