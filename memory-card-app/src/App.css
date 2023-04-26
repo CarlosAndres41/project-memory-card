@@ -27,3 +27,9 @@
     gap: 1rem;
 }
 /* Gameboard End */
+
+/* Card Start */
+.card-body img {
+    border-radius: 10%;
+}
+/* Card End */
