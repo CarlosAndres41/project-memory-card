@@ -1,10 +1,12 @@
 function addListeners() {
-    let cards = document.querySelectorAll('.card');
-    cards = Array.from(cards);
+    window.addEventListener('DOMContentLoaded', () => {
+        let cards = document.querySelectorAll('.card');
+        cards = Array.from(cards);
 
-    cards.forEach((card) => {
-        card.addEventListener('click', () => {
-            console.log('Card clicked');
+        cards.forEach((card) => {
+            card.onclick = () => {
+                console.log('Card clicked');
+            };
         });
     });
 }
