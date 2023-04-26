@@ -1,7 +1,7 @@
 const Name = () => {
     return (
         <div className='name'>
-            <h1>Mind Match</h1>
+            <h1>Memory Marathon</h1>
         </div>
     );
 };
