@@ -17,7 +17,7 @@ function App() {
 
     return (
         <div className='App'>
-            <Header />
+            <Header score={score} level={level} />
             <div className='gameboard'>
                 {images.map((image, index) => (
                     <Card image={image} key={index} />

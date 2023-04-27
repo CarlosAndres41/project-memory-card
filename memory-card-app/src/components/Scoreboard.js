@@ -1,13 +1,13 @@
-const Scoreboard = () => {
+const Scoreboard = (props) => {
     return (
         <div className='scoreboard'>
             <div className='level'>
-                <span>Level:</span>
-                <span>1</span>
+                <span>Level: </span>
+                <span>{props.level}</span>
             </div>
             <div className='score'>
-                <span>Score:</span>
-                <span>0</span>
+                <span>Score: </span>
+                <span>{props.score}</span>
             </div>
         </div>
     );
