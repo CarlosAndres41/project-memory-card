@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import './App.css';
 import Header from './components/Header';
 import Card from './components/Card';
@@ -8,6 +10,8 @@ const coolImages = require('cool-images');
 
 function App() {
     const images = coolImages.many(200, 200, 8);
+    const [score, setScore] = useState(0);
+    const [level, setLevel] = useState(1);
 
     addListeners();
 
