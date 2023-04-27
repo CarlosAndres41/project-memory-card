@@ -4,6 +4,8 @@ import './App.css';
 import Header from './components/Header';
 import Card from './components/Card';
 
+import shuffleDivs from './utils/shuffleDivs';
+
 const coolImages = require('cool-images');
 const images = coolImages.many(200, 200, 8);
 
@@ -15,6 +17,7 @@ function App() {
     function updateScore(e) {
         if (!clickedCards.includes(e.target.attributes.index.value)) {
             clickedCards.push(e.target.attributes.index.value);
+            shuffleDivs();
             setScore(score + 1);
         } else {
             console.log('you lose');
