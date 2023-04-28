@@ -38,6 +38,13 @@ function App() {
         }
     }
 
+    function playAgain() {
+        setGameOver(false);
+        setScore(0);
+        setLevel(1);
+        setImages(coolImages.many(200, 200, level + 2));
+    }
+
     useEffect(() => {
         setImages(coolImages.many(200, 200, level + 2));
         if (level > 1) {
@@ -70,7 +77,7 @@ function App() {
                 ))}
             </div>
             {showLevelUp && <LevelUp level={level} />}
-            {gameOver && <GameOver score={score} />}
+            {gameOver && <GameOver score={score} onClick={playAgain} />}
         </div>
     );
 }
