@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Card from './components/Card';
 import LevelUp from './components/LevelUp';
+import GameOver from './components/GameOver';
 
 import shuffleDivs from './utils/shuffleDivs';
 
@@ -15,6 +16,7 @@ function App() {
     const [images, setImages] = useState(coolImages.many(200, 200, level + 2));
     const [clickedCards, setClickedCards] = useState([]);
     const [showLevelUp, setShowLevelUp] = useState(false);
+    const [gameOver, setGameOver] = useState(false);
 
     function checkWin() {
         if (clickedCards.length === images.length) {
@@ -63,6 +65,7 @@ function App() {
                 ))}
             </div>
             {showLevelUp && <LevelUp level={level} />}
+            {gameOver && <GameOver score={score} />}
         </div>
     );
 }
