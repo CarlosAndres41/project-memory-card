@@ -34,9 +34,7 @@ function App() {
     }
 
     useEffect(() => {
-        window.addEventListener('DOMContentLoaded', () => {
-            console.log('level changed');
-        });
+        setImages(coolImages.many(200, 200, level + 2));
     }, [level]);
 
     return (
