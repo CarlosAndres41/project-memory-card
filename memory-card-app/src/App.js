@@ -37,6 +37,16 @@ function App() {
 
     useEffect(() => {
         setImages(coolImages.many(200, 200, level + 2));
+        if (level > 1) {
+            // Display level Up message when level changes:
+            setShowLevelUp(true);
+            // Hide message after 3 seconds:
+            const timeout = setTimeout(() => {
+                setShowLevelUp(false);
+            }, 3000);
+            // Cleanup function:
+            return () => clearTimeout(timeout);
+        }
     }, [level]);
 
     return (
