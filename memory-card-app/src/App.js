@@ -7,11 +7,11 @@ import Card from './components/Card';
 import shuffleDivs from './utils/shuffleDivs';
 
 const coolImages = require('cool-images');
-let images = coolImages.many(200, 200, 3);
 
 function App() {
     const [score, setScore] = useState(0);
     const [level, setLevel] = useState(1);
+    const [images, setImages] = useState(coolImages.many(200, 200, level + 2));
     const [clickedCards, setClickedCards] = useState([]);
 
     function checkWin() {
