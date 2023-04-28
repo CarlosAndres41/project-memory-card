@@ -7,12 +7,18 @@ import Card from './components/Card';
 import shuffleDivs from './utils/shuffleDivs';
 
 const coolImages = require('cool-images');
-const images = coolImages.many(200, 200, 8);
+const images = coolImages.many(200, 200, 3);
 
 function App() {
     const [score, setScore] = useState(0);
     const [level, setLevel] = useState(1);
     const [clickedCards, setClickedCards] = useState([]);
+
+    function checkWin() {
+        if (clickedCards.length === images.length) {
+            console.log('you win');
+        }
+    }
 
     function updateScore(e) {
         if (!clickedCards.includes(e.target.attributes.index.value)) {
