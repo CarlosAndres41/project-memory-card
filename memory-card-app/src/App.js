@@ -17,6 +17,7 @@ function App() {
     function checkWin() {
         if (clickedCards.length === images.length) {
             console.log('Level Up');
+            setClickedCards([]);
             setLevel(level + 1);
         }
     }
