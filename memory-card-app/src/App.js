@@ -17,6 +17,7 @@ function App() {
     const [clickedCards, setClickedCards] = useState([]);
     const [showLevelUp, setShowLevelUp] = useState(false);
     const [gameOver, setGameOver] = useState(false);
+    const [showGameOver, setShowGameOver] = useState(false);
 
     function checkWin() {
         if (clickedCards.length === images.length) {
@@ -33,7 +34,7 @@ function App() {
             shuffleDivs();
             setScore(score + 1);
         } else {
-            console.log('you lose');
+            setGameOver(true);
         }
     }
 
@@ -50,6 +51,10 @@ function App() {
             return () => clearTimeout(timeout);
         }
     }, [level]);
+
+    useEffect(() => {
+        setShowGameOver(true);
+    }, [gameOver]);
 
     return (
         <div className='App'>
