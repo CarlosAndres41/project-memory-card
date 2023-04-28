@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Card from './components/Card';
+import LevelUp from './components/LevelUp';
 
 import shuffleDivs from './utils/shuffleDivs';
 
@@ -13,6 +14,7 @@ function App() {
     const [level, setLevel] = useState(1);
     const [images, setImages] = useState(coolImages.many(200, 200, level + 2));
     const [clickedCards, setClickedCards] = useState([]);
+    const [showLevelUp, setShowLevelUp] = useState(false);
 
     function checkWin() {
         if (clickedCards.length === images.length) {
@@ -50,6 +52,7 @@ function App() {
                     />
                 ))}
             </div>
+            {showLevelUp && <LevelUp level={level} />}
         </div>
     );
 }
