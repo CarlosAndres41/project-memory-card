@@ -16,13 +16,15 @@ function App() {
 
     function checkWin() {
         if (clickedCards.length === images.length) {
-            console.log('you win');
+            console.log('Level Up');
+            setLevel(level + 1);
         }
     }
 
     function updateScore(e) {
         if (!clickedCards.includes(e.target.attributes.index.value)) {
             clickedCards.push(e.target.attributes.index.value);
+            checkWin();
             shuffleDivs();
             setScore(score + 1);
         } else {
