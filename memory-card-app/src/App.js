@@ -7,7 +7,7 @@ import Card from './components/Card';
 import shuffleDivs from './utils/shuffleDivs';
 
 const coolImages = require('cool-images');
-const images = coolImages.many(200, 200, 3);
+let images = coolImages.many(200, 200, 3);
 
 function App() {
     const [score, setScore] = useState(0);
@@ -32,6 +32,12 @@ function App() {
             console.log('you lose');
         }
     }
+
+    useEffect(() => {
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('level changed');
+        });
+    }, [level]);
 
     return (
         <div className='App'>
