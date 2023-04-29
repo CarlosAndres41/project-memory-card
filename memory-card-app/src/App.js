@@ -42,6 +42,7 @@ function App() {
         setGameOver(false);
         setScore(0);
         setLevel(1);
+        setClickedCards([]);
         setImages(coolImages.many(200, 200, level + 2));
     }
 
