@@ -61,5 +61,6 @@
 .gameover,
 .levelup {
     pointer-events: none;
+    filter: blur(3px);
 }
 /* Game Over and Level Up End  */
