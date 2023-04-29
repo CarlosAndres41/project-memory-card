@@ -31,6 +31,7 @@
 /* Card Start */
 .card-body img {
     border-radius: 10%;
+    cursor: pointer;
 }
 /* Card End */
 
@@ -39,13 +40,14 @@
     position: relative;
 }
 
-.game-over {
+.game-over,
+.level-up {
     position: absolute;
     z-index: 1;
     top: 50%;
     left: 50%;
     background-color: blue;
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 10%;
     transform: translate(-50%, -50%);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
