@@ -4,7 +4,6 @@ const Logo = () => {
             <h1>
                 <span>
                     <svg
-                        fill='#000000'
                         width='100px'
                         height='100px'
                         viewBox='0 0 14 14'
