@@ -64,13 +64,13 @@ function App() {
     }, [gameOver]);
 
     return (
-        <div
-            className={`App ${gameOver ? 'gameover' : ''} ${
-                showLevelUp ? 'levelup' : ''
-            } `}
-        >
+        <div className='App'>
             <Header score={score} level={level} />
-            <div className='gameboard'>
+            <div
+                className={`gameboard ${gameOver ? 'gameover' : ''} ${
+                    showLevelUp ? 'levelup' : ''
+                } `}
+            >
                 {images.map((image, index) => (
                     <Card
                         image={image}
