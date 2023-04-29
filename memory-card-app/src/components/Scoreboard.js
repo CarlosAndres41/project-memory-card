@@ -3,11 +3,11 @@ const Scoreboard = (props) => {
         <div className='scoreboard'>
             <div className='level'>
                 <span>Level: </span>
-                <span>{props.level}</span>
+                <span className='current'>{props.level}</span>
             </div>
             <div className='score'>
                 <span>Score: </span>
-                <span>{props.score}</span>
+                <span className='current'>{props.score}</span>
             </div>
         </div>
     );

@@ -36,6 +36,10 @@ body {
     color: var(--logo-color);
 }
 
+.current {
+    font-size: 2rem;
+}
+
 svg {
     fill: var(--logo-color);
 }
