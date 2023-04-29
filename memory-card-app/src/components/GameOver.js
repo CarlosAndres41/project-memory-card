@@ -5,7 +5,9 @@ const GameOver = (props) => {
             <p>
                 Your score: <span className='final-score'>{props.score}</span>
             </p>
-            <button onClick={props.onClick}>Play Again</button>
+            <button className='play-again' onClick={props.onClick}>
+                Play Again
+            </button>
         </div>
     );
 };

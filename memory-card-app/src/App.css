@@ -95,4 +95,20 @@ svg {
 .final-score {
     font-size: 2rem;
 }
+
+.play-again {
+    cursor: pointer;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: 1.5rem;
+    border: none;
+    background-color: var(--font-color);
+    border-radius: 5px;
+}
+
+.play-again:hover {
+    background-color: var(--bg-color);
+    color: var(--logo-color);
+    border: 2px solid var(--logo-color);
+}
 /* Game Over and Level Up End  */
