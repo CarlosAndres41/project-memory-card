@@ -65,7 +65,7 @@ function App() {
 
     return (
         <div
-            className={`App ${showGameOver ? 'gameover' : ''} ${
+            className={`App ${gameOver ? 'gameover' : ''} ${
                 showLevelUp ? 'levelup' : ''
             } `}
         >
