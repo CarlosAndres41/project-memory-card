@@ -33,3 +33,21 @@
     border-radius: 10%;
 }
 /* Card End */
+
+/* Game Over and Level Up Start */
+.App {
+    position: relative;
+}
+
+.game-over {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    background-color: blue;
+    padding: 2rem;
+    border-radius: 10%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+/* Game Over and Level Up End  */
